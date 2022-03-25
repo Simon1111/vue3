@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+*{
+	box-sizing: border-box;
+	font-family: "Lato", sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+body::-webkit-scrollbar {
+	width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+	box-sizing: border-box;
+}
+::placeholder {
+	color: $placeholder;
+}
+
+.container{
+	box-sizing: border-box;
+	display: flex;
+	padding: 0 30px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1140px;
+	width: 100%;
+}
+
+
+// sizes
+.title{
+	font-size: 44px;
+	font-weight: 700;
+	margin-top: 10px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding-top: 45px;
+	padding-bottom: 25px;
+	width: 100%;
+}
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
+	font-weight: 600;
+}
+
+h1,.h1{
+	font-size: 36px;
+}
+
+h2,.h2{
+	font-size: 24px;
+}
+
+h3,.h3{
+	font-size: 18px;
+}
+
+.blue-txt{
+	color: $blue;
+}
+
+#app{
+	background-color: $lightGrey;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100.05vh;
+}
+
+main{
+	margin-top: 75px;
+}
+
+.button{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+	font-size: 16px;
+	height: 35px;
+	border-radius: 5px;
+	color: $white;
+	cursor: pointer;
+	z-index: 5;
+	transition: all 0.4s ease-out 0s;
+	background-color: $blue;
+	&:hover{
+		background-color: $red;
+	}
+}
+
+.input-text{
+	color: #666;
+	padding: 0.75em;
+	height: auto;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #eaeaea;
+	border-radius: 2px;
+	background: #fafafa;
+	box-shadow: none;
+	box-sizing: border-box;
+	transition: all .2s linear;
+	margin-bottom: 20px;
+	&.error{
+		border-color: $red;
+	}
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 135px;
+	margin-left: -20px;
+	margin-right: -20px;
+	min-width: 100%;
+	.section{
+		box-sizing: border-box;
+    padding: 0 20px;
+		position: relative;
+		width: 33.333%;
+		.title{
+			justify-content: flex-start;
+			font-size: 32px;
+		}
+
+		p{
+			margin-bottom: 20px;
+		}
+
+		.input-text{
+			width: 100%;
+		}
+
+		@media screen and ( max-width: 1024px ){
+			width: 50%;
+		}
+		@media screen and ( max-width: 768px ){
+			width: 100%;
+		}
+	}
+}
